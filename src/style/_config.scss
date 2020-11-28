@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin transition($transitionProperty, $transitionDuration, $transitionTimingFunction) {
+  transition-property: $transitionProperty;
+  -webkit-transition-property: $transitionProperty;
+  -moz-transition-property: $transitionProperty;
+  -o-transition-property: $transitionProperty;
+
+  transition-duration: $transitionDuration;
+  -webkit-transition-duration: $transitionDuration;
+  -moz-transition-duration: $transitionDuration;
+  -o-transition-duration: $transitionDuration;
+
+  transition-timing-function: $transitionTimingFunction;
+  -webkit-transition-timing-function: $transitionTimingFunction;
+  -moz-transition-timing-function: $transitionTimingFunction;
+  -o-transition-timing-function: $transitionTimingFunction;
+}

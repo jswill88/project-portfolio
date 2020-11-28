@@ -1,0 +1,55 @@
+$themes: (
+  dark: (
+    bg: #222424,
+    primary: #3e54d3,
+    secondary: #4fe0b6,
+    tertiary: #15cdca,
+    textColor:#fff,
+  ),
+  light: (
+    bg: rgb(217, 250, 252),
+    primary: #9e58dc,
+    secondary: #f5ef34,
+    tertiary: #2b5c5b,
+    textColor: #000,
+  ),
+);
+
+@mixin set-color($theme, $themes) {
+  @each $section, $map in $themes {
+    @if($section == $theme) {
+      &.#{$theme} {
+        background-color: map-get($map,bg);
+        p, h1, h2, a, span {
+          color: map-get($map,textColor);
+        }
+        #menu + label > div {
+          background-color: map-get($map,textColor);
+        }
+        h1 div {
+          background-color: map-get($map,secondary);
+        }
+        h3 {
+          color: map-get($map,tertiary);
+        }
+        header {
+          background-color: map-get($map,primary);
+        }
+        nav {
+          background-color: map-get($map,bg);
+        }
+        #menu+label+nav {
+          border-color: map-get($map,primary);
+        }
+        #menu:hover+label div  {
+          background-color: map-get($map,tertiary);
+        }
+        a:hover{
+          color: map-get($map,tertiary);
+        }
+      }
+    } 
+  }
+}
+
+

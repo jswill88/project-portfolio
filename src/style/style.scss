@@ -1,0 +1,7 @@
+@import "reset";
+@import "colors";
+@import "config";
+@import "header";
+
+@include set-color(dark, $themes);
+@include set-color(light, $themes);
