@@ -13,7 +13,7 @@ export default function Header({ setTheme }) {
       </label>
       <nav>
         <ul>
-          <li><a href="about-me">About</a></li>
+          <li><a href="about">About</a></li>
           <li><a href={url}>Projects</a></li>
           <li><a href={url}>Contact</a></li>
           <li>
