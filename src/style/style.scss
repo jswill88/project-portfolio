@@ -2,6 +2,9 @@
 @import "colors";
 @import "config";
 @import "header";
+@import 'sections';
+@import 'projects';
+@import 'footer';
 
 @include set-color(dark, $themes);
 @include set-color(light, $themes);

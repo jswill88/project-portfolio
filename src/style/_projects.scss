@@ -1,0 +1,24 @@
+#polyrhythmGenerator {
+  background-image: url(../images/polyrhythmgenerator.gif);
+}
+#trackChat {
+  background-image: url(../images/TrackChatGif.gif);
+}
+.projectLink {
+  cursor: pointer;
+  margin-top: 1em;
+  background-color: white;
+  width: 100%;
+  height: 10vh;
+  @include flex;
+  background-position: center;
+  font-size: 2.5em;
+  letter-spacing: .1em;
+  // opacity: .7;
+  h4 {
+    font-weight: bold;
+    opacity: 1;
+    text-shadow: 2px 2px white;
+    // font-weight: bold;
+  }
+}

@@ -7,15 +7,13 @@ header {
   min-height: 300px;
   max-height: 1200px;
   transform: translateY(-40%);
+
   margin: 0 auto;
   @include flex(flex-start);
   flex-direction: column;
   padding-top: 37%;
 
-  // z-index: 10;
-  // position: sticky;
-  // top: 0;
-
+  
   #menu {
     display: none;
   }
@@ -24,7 +22,7 @@ header {
     flex-direction: column;
   }
   h1 {
-    font-family: "Rock Salt", cursive;
+    font-family: $headerfont;
     font-size: 4.5em;
     font-weight: bold;
     width: fit-content;
@@ -45,8 +43,12 @@ header {
   }
   nav {
     width: 100%;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: $monospacefont;
     letter-spacing: .2em;
+    // position: sticky;
+    // top: 60%;
+    // z-index: 10;
+
     
     ul {
       @include flex(space-evenly, center);
@@ -99,6 +101,7 @@ header {
           padding-left: 5%;
           min-width: 48vw;
           overflow: hidden;
+          @include flex(flex-start, center)
         }
       }
     }

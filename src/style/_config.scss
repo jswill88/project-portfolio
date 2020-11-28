@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+$headerfont: "Rock Salt", cursive;
+$monospacefont: 'Nanum Gothic Coding', monospace;
 
 
 @mixin flex($justify: center, $align: center) {

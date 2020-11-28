@@ -19,8 +19,13 @@ $themes: (
   @each $section, $map in $themes {
     @if($section == $theme) {
       &.#{$theme} {
+
+        body {
+          height: 140%;
+        }
+        
         background-color: map-get($map,bg);
-        p, h1, h2, a, span {
+        p, h1, h2, a, span, li {
           color: map-get($map,textColor);
         }
         #menu + label > div {
@@ -31,6 +36,8 @@ $themes: (
         }
         h3 {
           color: map-get($map,tertiary);
+          border-color: map-get($map,primary);
+          // background-color: lighten(map-get($map, bg), 10%);
         }
         header {
           background-color: map-get($map,primary);
