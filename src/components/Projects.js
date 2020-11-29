@@ -1,7 +1,12 @@
 import { useState } from 'react';
+
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+
 import BackToTop from './BackToTop';
 import PolyrhythmGenerator from './PolyrhythmGenerator';
 import TrackChat from './TrackChat';
+import BrainBugs from './BrainBugs';
 
 export default function Projects() {
   const [projectDisplayed, setProjectDisplayed] = useState(null)
@@ -13,6 +18,10 @@ export default function Projects() {
     {
       name: 'Polyrhythm Generator',
       component: <PolyrhythmGenerator />,
+    },
+    {
+      name: 'Brain Bugs',
+      component: <BrainBugs />,
     }
   ]
 
@@ -39,6 +48,7 @@ export default function Projects() {
             }
           >
             <h4>{project.name}</h4>
+            {projectDisplayed === camelCase ? <ExpandLessIcon fontSize="large"/> : <ExpandMoreIcon fontSize="large" />}
           </div>
           {projectDisplayed === camelCase && project.component}
         </div>

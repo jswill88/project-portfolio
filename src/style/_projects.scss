@@ -1,18 +1,17 @@
-// #polyrhythmGenerator {
-//   background-image: url(../images/polyrhythmgenerator.gif);
-// }
-// #trackChat {
-//   background-image: url(../images/TrackChatGif.gif);
-// }
+
 .projectLink {
   cursor: pointer;
   margin-top: 1em;
   // background-color: white;
-  width: 80%;
+  width: 100%;
   height: 10vh;
   justify-self: center;
-  @include flex;
-  background-position: center;
+  flex-direction: row;
+  justify-content: space-between !important;
+  padding: 0 5%;
+  // @include flex(space-between, space-between);
+  // display: flex !important;
+  // background-position: center;
   font-size: 2.5em;
   letter-spacing: .1em;
   h4 {
@@ -65,5 +64,10 @@ p {
 #trackChatImages {
   img {
     width: 30%;
+  }
+}
+#brainBugsImages {
+  img {
+    width: 45%;
   }
 }

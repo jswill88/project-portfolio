@@ -14,7 +14,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className={`container ${theme ? 'dark' : 'light'}`}>
+      <div className={`container ${theme ? 'light' : 'dark'}`}>
         <Header setTheme={setTheme} />
         <About />
         <Projects />
