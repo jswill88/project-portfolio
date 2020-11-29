@@ -12,6 +12,7 @@ export default function PolyrhythmGenerator() {
       <ul>
         <li>Live Site: <a href="https://polyrhythmgenerator.netlify.app/">polyrhythmgenerator.netlify.app/</a></li>
         <li>GitHub Repo: <a href="https://github.com/jswill88/polyrhythm-generator">github.com/jswill88/polyrhythm-generator</a></li>
+        <li>November 2020</li>
       </ul>
     </div>
   )

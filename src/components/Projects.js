@@ -8,7 +8,7 @@ export default function Projects() {
   const projects = [
     {
       name: 'Track Chat',
-      component: <TrackChat />,
+      component: <TrackChat projectDisplayed={projectDisplayed} />,
     },
     {
       name: 'Polyrhythm Generator',
@@ -32,7 +32,7 @@ export default function Projects() {
       return (
         <div key={camelCase}>
           <div
-            id={camelCase}
+            id={projectDisplayed === camelCase ? null : camelCase}
             className="projectLink"
             onClick={() =>
               setProjectDisplayed(p => p === camelCase ? null : camelCase)
