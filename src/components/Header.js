@@ -12,7 +12,7 @@ function Nav({ setTheme }) {
         <li><HashLink smooth to="/#projects">Projects</HashLink></li>
         <li><HashLink smooth to="/#contact">Contact</HashLink></li>
         <li>
-          <span>Change Theme: </span>
+          <span>Change Theme </span>
           <Switch
             color="default"
             onChange={() => setTheme(theme => !theme)}

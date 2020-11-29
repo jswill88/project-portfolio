@@ -23,7 +23,7 @@ $themes: (
         body {
           height: 140%;
         }
-        
+
         background-color: map-get($map,bg);
         p, h1, h2, a, span, li {
           color: map-get($map,textColor);
@@ -53,6 +53,12 @@ $themes: (
         }
         a:hover{
           color: map-get($map,tertiary);
+        }
+        @if(lightness(map-get($map, bg)) > 70) {
+          .projectLink {
+            border: 1px solid map-get($map, primary)
+          }
+
         }
       }
     } 
