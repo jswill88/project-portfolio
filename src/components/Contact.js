@@ -1,3 +1,5 @@
+import BackToTop from './BackToTop';
+
 export default function Contact() {
   return (
     <div id="contact" className="bodySection">
@@ -7,6 +9,8 @@ export default function Contact() {
         <li>LinkedIn</li>
         <li>GitHub</li>
       </ul>
+      <BackToTop />
     </div>
+
   )
 }

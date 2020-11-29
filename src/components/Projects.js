@@ -12,9 +12,10 @@ export default function Projects() {
     },
     {
       name: 'Polyrhythm Generator',
-      component: < PolyrhythmGenerator />,
+      component: <PolyrhythmGenerator />,
     }
   ]
+
   const makeCamelCase = word => {
     let camelCase = word.split(' ');
       camelCase[0] = camelCase[0]
@@ -31,7 +32,6 @@ export default function Projects() {
       return (
         <div key={camelCase}>
           <div
-
             id={camelCase}
             className="projectLink"
             onClick={() =>
