@@ -2,25 +2,14 @@
 .projectLink {
   cursor: pointer;
   margin-top: 1em;
-  // background-color: white;
   width: 100%;
   height: 10vh;
   justify-self: center;
   flex-direction: row;
   justify-content: space-between !important;
   padding: 0 5%;
-  // @include flex(space-between, space-between);
-  // display: flex !important;
-  // background-position: center;
   font-size: 2.5em;
   letter-spacing: .1em;
-  h4 {
-    // font-weight: bold;
-    opacity: 1;
-    // color: black;
-    // text-shadow: 2px 2px white;
-  }
-
 }
 div {
   @include flex();

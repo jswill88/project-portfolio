@@ -1,8 +1,8 @@
 .bodySection {
-  min-height: 100vh;
+  // min-height: 95vh;
   width: 80%;
   // &:first-of-type {
-    margin-top: -20%;
+    // margin-top: -100%;
   // }
   ul {
     align-self: flex-start;
@@ -11,8 +11,8 @@
     font-size: 1.2em;
     margin: 2em 0 1em 0;
   }
-  margin: 5% auto;
-  padding: 3% 0;
+  margin: 2% auto;
+  padding: 1% 0;
   div {
     @include flex;
   }
@@ -20,7 +20,7 @@
     font-size: 4em;
     font-family: $monospacefont;
     letter-spacing: 0.1em;
-    padding: 1vh 2vw;
+    padding: 1vh 0vw;
     width: 100%;
   }
   p {
@@ -42,3 +42,4 @@
     width: 90%;
   }
 }
+
