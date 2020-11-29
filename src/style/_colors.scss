@@ -4,65 +4,73 @@ $themes: (
     primary: #3e54d3,
     secondary: #4fe0b6,
     tertiary: #15cdca,
-    textColor:#fff,
+    textColor: #fff,
   ),
   light: (
-    bg: rgb(217, 250, 252),
-    primary: #9e58dc,
-    secondary: #f5ef34,
-    tertiary: #2b5c5b,
+    bg: #dfdce3,
+    primary: #4abdac,
+    secondary: #fc4a1a,
+    tertiary: #f78733,
     textColor: #000,
   ),
 );
 
 @mixin set-color($theme, $themes) {
   @each $section, $map in $themes {
-    @if($section == $theme) {
+    @if ($section == $theme) {
       &.#{$theme} {
-
         body {
           height: 140%;
         }
 
-        background-color: map-get($map,bg);
-        p, h1, h2, h4, a, span, li {
-          color: map-get($map,textColor);
+        background-color: map-get($map, bg);
+        p,
+        h1,
+        h2,
+        h4,
+        a,
+        span,
+        li {
+          color: map-get($map, textColor);
         }
         #menu + label > div {
-          background-color: map-get($map,textColor);
+          background-color: map-get($map, textColor);
         }
         h1 div {
-          background-color: map-get($map,secondary);
+          background-color: map-get($map, secondary);
         }
         h3 {
-          color: map-get($map,secondary);
-          border-color: map-get($map,primary);
+          color: map-get($map, secondary);
+          border-color: map-get($map, primary);
           // background-color: lighten(map-get($map, bg), 10%);
         }
         header {
-          background-color: map-get($map,primary);
+          background-color: map-get($map, primary);
         }
         nav {
-          background-color: map-get($map,bg);
+          background-color: map-get($map, bg);
         }
-        #menu+label+nav {
-          border-color: map-get($map,primary);
+        #menu + label + nav {
+          border-color: map-get($map, primary);
         }
-        #menu:hover+label div  {
-          background-color: map-get($map,tertiary);
+        #menu:hover + label div {
+          background-color: map-get($map, tertiary);
         }
-        a:hover, div:hover > h4{
-          color: map-get($map,tertiary);
+        a:hover,
+        div:hover > h4 {
+          color: map-get($map, tertiary);
         }
-        // @if(lightness(map-get($map, bg)) > 70) {
-          .projectLink {
-            border: 1px solid map-get($map, primary)
-          }
+        @if (lightness(map-get($map, bg)) > 70) {
+            img[alt^="Polyrhythm"] {
+              border: 1px solid map-get($map, textColor );
+            }
+        }
+        .projectLink {
+          border: 2px solid map-get($map, primary);
+        }
 
         // }
       }
-    } 
+    }
   }
 }
-
-
