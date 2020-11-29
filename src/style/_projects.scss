@@ -1,13 +1,13 @@
-#polyrhythmGenerator {
-  background-image: url(../images/polyrhythmgenerator.gif);
-}
-#trackChat {
-  background-image: url(../images/TrackChatGif.gif);
-}
+// #polyrhythmGenerator {
+//   background-image: url(../images/polyrhythmgenerator.gif);
+// }
+// #trackChat {
+//   background-image: url(../images/TrackChatGif.gif);
+// }
 .projectLink {
   cursor: pointer;
   margin-top: 1em;
-  background-color: white;
+  // background-color: white;
   width: 80%;
   height: 10vh;
   justify-self: center;
@@ -16,9 +16,10 @@
   font-size: 2.5em;
   letter-spacing: .1em;
   h4 {
-    font-weight: bold;
+    // font-weight: bold;
     opacity: 1;
-    text-shadow: 2px 2px white;
+    // color: black;
+    // text-shadow: 2px 2px white;
   }
 
 }
