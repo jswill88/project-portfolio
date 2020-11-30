@@ -1,4 +1,22 @@
 footer {
   height: 10vh;
-  @include flex;
+  @media (min-width:811px) {
+    width: 80%;
+  }
+  @include flex(space-between, center);
+  flex-direction: row;
+  font-size: .8em;
+  p {text-align: center;}
+}
+@media screen and (max-width: 811px){
+  footer {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 675px) {
+  footer {
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
