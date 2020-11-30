@@ -272,6 +272,9 @@ header {
   #menu + label {
     margin-top: -75px !important;
   }
+  #menu:checked + label + nav {
+    margin-top: -290px;
+  }
 }
 
 
