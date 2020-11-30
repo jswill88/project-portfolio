@@ -213,7 +213,7 @@ header {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 370px) {
   header {
     width: 285px;
     height: 285px;
@@ -255,3 +255,23 @@ header {
     }
   }
 }
+@media screen and (max-width: 500px) and (min-width:370px) {
+  header {
+    width: 368px;
+    height: 368px;
+    margin-bottom: -245px;
+    h1 {
+      @media (min-width: 370px){
+        font-size: 1.8em !important;
+      }
+    }
+    h2 {
+      font-size: 1em;
+    }
+  }
+  #menu + label {
+    margin-top: -75px !important;
+  }
+}
+
+
