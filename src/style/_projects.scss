@@ -94,7 +94,34 @@ p {
   }
 }
 @media screen and (max-width: 670px) {
-
+  .project {
+    ul {
+      margin: 4em 0 3em 0;
+    }
+  }
+  #trackChatImages {
+    flex-direction: column;
+    img {
+      width: 80%;
+      margin-bottom: 2%;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  #polyrhythmGeneratorImages {
+    // flex-direction: column;
+    img {
+      width: 80%;
+      &:first-of-type {
+        width: 90%;
+        margin-bottom: 2%;
+      }
+    }
+  }
+  .projectLink {
+    font-size: 1.9em;
+  }
 }
 @media screen and (max-width: 500px) {
 
