@@ -50,7 +50,7 @@
     font-size: 3em;
   }
   p {
-    @media (min-width:670px) {
+    @media (min-width: 670px) {
       font-size: 1em;
     }
   }
@@ -61,4 +61,15 @@
   }
 }
 @media screen and (max-width: 500px) {
+  #contact {
+    li a {
+      display: block;
+      font-size: 0.75em;
+    }
+  }
+  .bodySection {
+    p {
+      font-size: 1em;
+    }
+  }
 }

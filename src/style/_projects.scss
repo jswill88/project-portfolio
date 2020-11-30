@@ -124,5 +124,20 @@ p {
   }
 }
 @media screen and (max-width: 500px) {
+  #trackChatImages img , #polyrhythmGeneratorImages img, #brainBugsImages img {
+    // img {
+      width: 100% !important;
+    // }
+  }
+  .project {
+  
+      ul{
+        margin: 6em 0 5em 0 !important;
+      }
 
+      li a{
+        font-size: .75em !important;
+        display: block;
+      }
+    }
 }
