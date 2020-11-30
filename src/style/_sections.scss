@@ -37,6 +37,16 @@
     width: 100%;
   }
 }
+#techImages {
+  margin-top: 3%;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @include flex(space-evenly, center);
+  img {
+    width: 150px;
+  }
+}
 .backToTop {
   margin-top: 2em;
   text-align: center;

@@ -32,9 +32,11 @@ $themes: (
         span,
         li {
           color: map-get($map, textColor);
+          @include transition(color, 400ms, ease-in-out);
         }
         #menu + label > div {
           background-color: map-get($map, textColor);
+          
         }
         h1 div {
           background-color: map-get($map, secondary);
@@ -61,16 +63,13 @@ $themes: (
           color: map-get($map, tertiary);
         }
         @if (lightness(map-get($map, bg)) > 70) {
-            img[alt^="Polyrhythm"] {
+            img[alt^="Polyrhythm"], img[alt^="Brain"] {
               border: 1px solid map-get($map, textColor );
             }
         }
         .projectLink {
-          // border: 2px solid map-get($map, primary);
           background-color: lighten(map-get($map, bg), 5%);
         }
-
-        // }
       }
     }
   }

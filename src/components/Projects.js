@@ -4,17 +4,17 @@ import { useState } from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
-import BackToTop from './BackToTop';
+// import BackToTop from './BackToTop';
 import PolyrhythmGenerator from './PolyrhythmGenerator';
 import TrackChat from './TrackChat';
 import BrainBugs from './BrainBugs';
 
-export default function Projects() {
+export default function Projects({ theme }) {
   const [projectDisplayed, setProjectDisplayed] = useState(null)
   const projects = [
     {
       name: 'Track Chat',
-      component: <TrackChat projectDisplayed={projectDisplayed} />,
+      component: <TrackChat projectDisplayed={projectDisplayed} theme={theme} />,
     },
     {
       name: 'Polyrhythm Generator',
@@ -41,7 +41,7 @@ export default function Projects() {
       let camelCase = makeCamelCase(project.name);
       return (
         <div key={camelCase}>
-        <HashLink to={camelCase} /*key={camelCase}*/>
+        <HashLink to={camelCase}>
           <div
             id={projectDisplayed === camelCase ? null : camelCase}
             className="projectLink"
@@ -64,7 +64,7 @@ export default function Projects() {
     <div id="projects" className="bodySection">
       <h3>Projects</h3>
       {sortProjects()}
-      <BackToTop />
+      {/* <BackToTop /> */}
     </div>
   )
 }

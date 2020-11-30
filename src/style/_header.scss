@@ -155,7 +155,7 @@ header {
           width: 100%;
           background-color: white;
           border-radius: 20px;
-          @include transition(transform, 400ms, ease-in-out);
+          @include transition(background-color transform, 400ms, ease-in-out);
         }
       }
       &:checked + label {
