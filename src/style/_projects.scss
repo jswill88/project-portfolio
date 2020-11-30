@@ -1,4 +1,6 @@
-
+div > a {
+  width: 100%;
+}
 .projectLink {
   cursor: pointer;
   margin-top: 1em;
@@ -66,7 +68,7 @@ p {
 @media (max-width: 811px) {
   .project {
     ul {
-      margin: 3em 0 1em 0;
+      margin: 4em 0 2em 0;
     }
   }
   #brainBugsImages {

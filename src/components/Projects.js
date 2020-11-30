@@ -1,3 +1,4 @@
+import { HashLink } from 'react-router-hash-link';
 import { useState } from 'react';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -40,6 +41,7 @@ export default function Projects() {
       let camelCase = makeCamelCase(project.name);
       return (
         <div key={camelCase}>
+        <HashLink to={camelCase} /*key={camelCase}*/>
           <div
             id={projectDisplayed === camelCase ? null : camelCase}
             className="projectLink"
@@ -51,7 +53,9 @@ export default function Projects() {
             {projectDisplayed === camelCase ? <ExpandLessIcon fontSize="large"/> : <ExpandMoreIcon fontSize="large" />}
           </div>
           {projectDisplayed === camelCase && project.component}
+        </HashLink>
         </div>
+
       )
     });
   }
