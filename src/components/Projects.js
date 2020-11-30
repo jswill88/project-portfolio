@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-
-// import BackToTop from './BackToTop';
 import PolyrhythmGenerator from './PolyrhythmGenerator';
 import TrackChat from './TrackChat';
 import BrainBugs from './BrainBugs';
+import Interval from './Interval';
+import ScubaTv from './ScubaTv';
 
 export default function Projects({ theme }) {
   const [projectDisplayed, setProjectDisplayed] = useState(null)
@@ -23,7 +23,15 @@ export default function Projects({ theme }) {
     {
       name: 'Brain Bugs',
       component: <BrainBugs />,
-    }
+    }, 
+    {
+      name: 'Interval',
+      component: <Interval />,
+    },
+    {
+      name: 'Scuba TV',
+      component: <ScubaTv />,
+    },
   ]
 
   const makeCamelCase = word => {
@@ -43,19 +51,16 @@ export default function Projects({ theme }) {
         <div key={camelCase}>
         <HashLink smooth to={`/#${camelCase}`}>
           <div
-            // id={projectDisplayed === camelCase ? null : camelCase}
             className="projectLink"
             onClick={() =>
               setProjectDisplayed(p => p === camelCase ? null : camelCase)
-            }
-          >
+            }>
             <h4 id={camelCase}>{project.name}</h4>
             {projectDisplayed === camelCase ? <ExpandLessIcon fontSize="large"/> : <ExpandMoreIcon fontSize="large" />}
           </div>
         </HashLink>
           {projectDisplayed === camelCase && project.component}
         </div>
-
       )
     });
   }
