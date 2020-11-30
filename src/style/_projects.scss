@@ -25,7 +25,9 @@ div {
       line-height: 2;
       letter-spacing: .15vw;
       font-size: 1.2em;
-      margin: 2em 0 1em 0;
+      @media (min-width: 811px) {
+        margin: 2em 0 1em 0;
+      }
       width: 100%;
     }
     p {
@@ -59,4 +61,41 @@ p {
   img {
     width: 45%;
   }
+}
+
+@media (max-width: 811px) {
+  .project {
+    ul {
+      margin: 3em 0 1em 0;
+    }
+  }
+  #brainBugsImages {
+    flex-direction: column;
+
+    img {
+      width: 90%;
+      &:first-of-type {
+        margin-bottom: 2%;
+      }
+    }
+  }
+  #polyrhythmGeneratorImages {
+    flex-direction: column;
+    img {
+      width: 60%;
+      &:first-of-type {
+        width: 90%;
+        margin-bottom: 2%;
+      }
+    }
+  }
+  .projectLink {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 670px) {
+
+}
+@media screen and (max-width: 500px) {
+
 }
