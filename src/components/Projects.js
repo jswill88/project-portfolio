@@ -41,19 +41,19 @@ export default function Projects({ theme }) {
       let camelCase = makeCamelCase(project.name);
       return (
         <div key={camelCase}>
-        <HashLink to={camelCase}>
+        <HashLink smooth to={`/#${camelCase}`}>
           <div
-            id={projectDisplayed === camelCase ? null : camelCase}
+            // id={projectDisplayed === camelCase ? null : camelCase}
             className="projectLink"
             onClick={() =>
               setProjectDisplayed(p => p === camelCase ? null : camelCase)
             }
           >
-            <h4>{project.name}</h4>
+            <h4 id={camelCase}>{project.name}</h4>
             {projectDisplayed === camelCase ? <ExpandLessIcon fontSize="large"/> : <ExpandMoreIcon fontSize="large" />}
           </div>
-          {projectDisplayed === camelCase && project.component}
         </HashLink>
+          {projectDisplayed === camelCase && project.component}
         </div>
 
       )
@@ -64,7 +64,6 @@ export default function Projects({ theme }) {
     <div id="projects" className="bodySection">
       <h3>Projects</h3>
       {sortProjects()}
-      {/* <BackToTop /> */}
     </div>
   )
 }
