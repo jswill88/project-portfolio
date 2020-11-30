@@ -1,14 +1,12 @@
 header {
   border-radius: 50%;
-  width: 85%;
-  min-width: 300px;
-  max-width: 1200px;
-  height: 85vw;
-  min-height: 300px;
-  max-height: 1200px;
-  transform: translateY(-40%);
+  width: 1100px;
+  height: 1100px;
+  position: relative;
+  transform: translateY(-65%);
 
   margin: 0 auto;
+  margin-bottom: -700px;
   @include flex(flex-start);
   flex-direction: column;
   padding-top: 37%;
@@ -26,7 +24,9 @@ header {
     font-size: 4.5em;
     font-weight: bold;
     width: fit-content;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    margin-top: 25%;
 
     div {
       height: 3px;
@@ -39,15 +39,19 @@ header {
   }
   h2 {
     font-size: 2em;
-    margin-right: 5vw;
+    // margin-right: 5vw;
+    position: absolute;
+    top: 62%;
+    margin-top: 26%;
   }
   nav {
     width: 100%;
     font-family: $monospacefont;
     letter-spacing: .2em;
-    // position: sticky;
-    // top: 60%;
-    // z-index: 10;
+
+    position: absolute;
+    top: 730px;
+    z-index: 10;
 
     
     ul {
@@ -68,18 +72,46 @@ header {
   }
 }
 
-@media screen and (max-width: 775px) {
+@media (max-width: 1100px) {
   header {
-    h1 {
-      margin-top: 10%;
-      font-size: 3em;
-    }
+    width: 800px;
+    height: 800px;
+    margin-bottom: -500px;
+  }
+  h1 {
+    top: 45% !important;
+    margin-top: 20%;
+    font-size: 4em !important;
+  }
+  nav {
+    top: 530px !important;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  header {
+    width: 650px;
+    height: 650px;
+    margin-bottom: -400px;
+  }
+  h1 {
+    top: 45% !important;
+    margin-top: 20%;
+    font-size: 3em !important;
+  }
+  header {
+    // h1 {
+    //   margin-top: 10%;
+    //   font-size: 3em;
+    // }
     h2 {
-      font-size: 1em;
+      font-size: 1.5em;
     }
     nav {
+      margin-top: -100px;
       font-size: 1.5em;
       position: absolute;
+      // bottom: -1000px;
       right: 0;
       z-index: 5;
       height: 200px;
@@ -111,7 +143,8 @@ header {
         height: 25px;
         width: 30px;
         position: absolute;
-        right: 2%;
+        right: 8%;
+        top: 430px;
         margin-top: 2%;
         @include flex(space-between, center);
         flex-direction: column;
@@ -122,7 +155,7 @@ header {
           width: 100%;
           background-color: white;
           border-radius: 20px;
-          @include transition(transform, 400ms, ease-in-out);
+          @include transition(background-color transform, 400ms, ease-in-out);
         }
       }
       &:checked + label {
@@ -140,15 +173,16 @@ header {
 
         & + nav {
           display: block;
-          width: 50vw;
-          right: 0;
+          width: 40vw;
+          top: 430px ;// !important;
+          right: 5%;
           border: 2px solid;
           @include transition(width, 400ms, ease-in);
           ul {
             visibility: visible;
             width: 100%;
             li {
-              min-width: 50vw;
+              // min-width: 50vw;
               overflow: hidden;
             }
           }
@@ -158,13 +192,37 @@ header {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 670px) {
   header {
-    width: 100vw;
-    min-width: 240px;
-    min-height: 240px;
+    width: 500px;
+    height: 500px;
+    margin-bottom: -300px;
     h1 {
-      font-size: 1.75em;
+      font-size: 2.5em !important;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+  #menu + label {
+    top: 325px !important;
+  }
+  #menu:checked + label + nav {
+    margin-top: -200px;
+    width: 70vw !important;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  header {
+    width: 285px;
+    height: 285px;
+    margin-bottom: -150px;
+    // min-width: 00px;
+    // min-height: 00px;
+
+    h1 {
+      font-size: 1.7em !important;
       div {
         height: 1px;
       }
@@ -176,8 +234,18 @@ header {
       font-size: 1em;
     }
   }
+  #menu + label {
+    margin-top: -134px !important;
+    // height: 20px !important;
+    // width: 25px !important;
+    // div {
+    //   height : 1px !important;
+    // }
+    // right: 0 !important;
+  }
   #menu:checked + label + nav {
-    width: 80vw !important;
+    // width: 80vw !important;
+    margin-top: -345px;
     ul {
       width: 100%;
       li {
@@ -187,3 +255,23 @@ header {
     }
   }
 }
+@media screen and (max-width: 500px) and (min-width:370px) {
+  header {
+    width: 368px;
+    height: 368px;
+    margin-bottom: -245px;
+    h1 {
+      @media (min-width: 370px){
+        font-size: 1.8em !important;
+      }
+    }
+    h2 {
+      font-size: 1em;
+    }
+  }
+  #menu + label {
+    margin-top: -75px !important;
+  }
+}
+
+

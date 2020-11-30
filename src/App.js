@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 
@@ -9,15 +9,24 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './style/style.scss'
 
+
+
 function App() {
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    (async () => {
+      const startTheme = await localStorage.getItem('theme');
+      setTheme(JSON.parse(startTheme) || 'light');
+    })();
+  },[])
 
   return (
     <BrowserRouter>
-      <div className={`container ${theme ? 'dark' : 'light'}`}>
-        <Header setTheme={setTheme} />
+      <div className={`container ${theme}`}>
+        <Header setTheme={setTheme} theme={theme} />
         <About />
-        <Projects />
+        <Projects theme={theme} />
         <Contact />
         <Footer />
       </div>

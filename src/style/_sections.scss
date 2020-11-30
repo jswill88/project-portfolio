@@ -1,8 +1,8 @@
 .bodySection {
-  min-height: 100vh;
+  // min-height: 95vh;
   width: 80%;
   // &:first-of-type {
-    margin-top: -20%;
+  // margin-top: -100%;
   // }
   ul {
     align-self: flex-start;
@@ -11,25 +11,40 @@
     font-size: 1.2em;
     margin: 2em 0 1em 0;
   }
-  margin: 5% auto;
-  padding: 3% 0;
+  margin: 2% auto;
+  padding: 1% 0;
   div {
     @include flex;
   }
   h3 {
-    font-size: 4em;
+    @media (min-width: 812px) {
+      font-size: 4em;
+    }
     font-family: $monospacefont;
     letter-spacing: 0.1em;
-    padding: 1vh 2vw;
+    padding: 1vh 0vw;
     width: 100%;
   }
   p {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2;
     letter-spacing: 0.15vw;
+    // @media (min-width: 812px) {
+    //   font-size: 1.2em;
+    // }
     font-size: 1.2em;
     text-align: justify;
     width: 100%;
+  }
+}
+#techImages {
+  margin-top: 3%;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @include flex(space-evenly, center);
+  img {
+    width: 150px;
   }
 }
 .backToTop {
@@ -37,8 +52,34 @@
   text-align: center;
   @include flex;
 }
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 811px) {
   .bodySection {
     width: 90%;
+  }
+  h3 {
+    font-size: 3em;
+  }
+  p {
+    @media (min-width: 670px) {
+      font-size: 1em;
+    }
+  }
+}
+@media screen and (max-width: 670px) {
+  h3 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  #contact {
+    li a {
+      display: block;
+      font-size: 0.75em;
+    }
+  }
+  .bodySection {
+    p {
+      font-size: 1em;
+    }
   }
 }

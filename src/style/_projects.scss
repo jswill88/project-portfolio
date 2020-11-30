@@ -1,27 +1,17 @@
-// #polyrhythmGenerator {
-//   background-image: url(../images/polyrhythmgenerator.gif);
-// }
-// #trackChat {
-//   background-image: url(../images/TrackChatGif.gif);
-// }
+div > a {
+  width: 100%;
+}
 .projectLink {
   cursor: pointer;
   margin-top: 1em;
-  // background-color: white;
-  width: 80%;
+  width: 100%;
   height: 10vh;
   justify-self: center;
-  @include flex;
-  background-position: center;
+  flex-direction: row;
+  justify-content: space-between !important;
+  padding: 0 5%;
   font-size: 2.5em;
   letter-spacing: .1em;
-  h4 {
-    // font-weight: bold;
-    opacity: 1;
-    // color: black;
-    // text-shadow: 2px 2px white;
-  }
-
 }
 div {
   @include flex();
@@ -37,7 +27,9 @@ div {
       line-height: 2;
       letter-spacing: .15vw;
       font-size: 1.2em;
-      margin: 2em 0 1em 0;
+      @media (min-width: 811px) {
+        margin: 3em 0 1em 0;
+      }
       width: 100%;
     }
     p {
@@ -66,4 +58,88 @@ p {
   img {
     width: 30%;
   }
+}
+#brainBugsImages {
+  img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 811px) {
+  .project {
+    ul {
+      margin: 4em 0 2em 0;
+    }
+  }
+  #brainBugsImages {
+    flex-direction: column;
+
+    img {
+      width: 90%;
+      &:first-of-type {
+        margin-bottom: 2%;
+      }
+    }
+  }
+  #polyrhythmGeneratorImages {
+    flex-direction: column;
+    img {
+      width: 60%;
+      &:first-of-type {
+        width: 90%;
+        margin-bottom: 2%;
+      }
+    }
+  }
+  .projectLink {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 670px) {
+  .project {
+    ul {
+      margin: 4em 0 3em 0;
+    }
+  }
+  #trackChatImages {
+    flex-direction: column;
+    img {
+      width: 80%;
+      margin-bottom: 2%;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  #polyrhythmGeneratorImages {
+    // flex-direction: column;
+    img {
+      width: 80%;
+      &:first-of-type {
+        width: 90%;
+        margin-bottom: 2%;
+      }
+    }
+  }
+  .projectLink {
+    font-size: 1.9em;
+  }
+}
+@media screen and (max-width: 500px) {
+  #trackChatImages img , #polyrhythmGeneratorImages img, #brainBugsImages img {
+    // img {
+      width: 100% !important;
+    // }
+  }
+  .project {
+  
+      ul{
+        margin: 6em 0 5em 0 !important;
+      }
+
+      li a{
+        font-size: .75em !important;
+        display: block;
+      }
+    }
 }
