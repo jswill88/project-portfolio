@@ -10,7 +10,9 @@ import Interval from './Interval';
 import ScubaTv from './ScubaTv';
 
 export default function Projects({ theme }) {
+  
   const [projectDisplayed, setProjectDisplayed] = useState(window.location.hash.slice(1, window.location.hash.length))
+
   const projects = [
     {
       name: 'Track Chat',
