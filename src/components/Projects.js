@@ -10,7 +10,7 @@ import Interval from './Interval';
 import ScubaTv from './ScubaTv';
 
 export default function Projects({ theme }) {
-  const [projectDisplayed, setProjectDisplayed] = useState(null)
+  const [projectDisplayed, setProjectDisplayed] = useState(window.location.hash.slice(1, window.location.hash.length))
   const projects = [
     {
       name: 'Track Chat',
@@ -49,10 +49,10 @@ export default function Projects({ theme }) {
       let camelCase = makeCamelCase(project.name);
       return (
         <div key={camelCase}>
-        <HashLink smooth to={`/#${camelCase}`}>
+        <HashLink smooth to={!(projectDisplayed === camelCase) ? `/#${camelCase}` : '/#home'}>
           <div
             className="projectLink"
-            onClick={() =>
+            onClick={() =>          
               setProjectDisplayed(p => p === camelCase ? null : camelCase)
             }>
             <h4 id={camelCase}>{project.name}</h4>
