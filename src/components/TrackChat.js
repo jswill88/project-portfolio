@@ -1,23 +1,13 @@
-import { useEffect, /*useState*/ } from "react"
+import { useEffect } from "react"
 import expoFunction from "../modules/expoFunction";
 import toExpo from '../images/toExpo.png';
 import Group from '../images/TrackChatGroup.gif';
 import Map from '../images/TrackChatMap.gif';
 import Signin from '../images/TrackChatSignIn.gif';
-// import DarkSpinner from '../images/spinnerDark.gif';
-// import LightSpinner from '../images/spinnerLight.gif';
-
-
-// use context to get correct mode for expo viewer
-// get loading spinner
 
 export default function TrackChat({ projectsDisplayed, theme }) {
-  // const [loading, setLoading] = useState(false);
   useEffect(() => {
-    // setLoading(true);
     (async () => await expoFunction())();
-    // setLoading(false);
-    console.log('done loading')
   }, [projectsDisplayed])
   return (
     <div className="project" id="trackChat">
@@ -31,9 +21,6 @@ export default function TrackChat({ projectsDisplayed, theme }) {
       </div>
       
       <p>Try it out by downloading the Expo client and scanning the QR code below or by clicking <img src={toExpo} alt="example of link to expo"/> to see the QR code in a new screen. If you are on mobile, click "Open with Expo Client".</p>
-      {/* {loading ? 
-      <img src={LightSpinner} alt="Loading" style={{width: '50%'}} />
-      : */}
         <div
           data-snack-id="@jswill88/track-chat-presentation"
           data-snack-platform="mydevice"
@@ -42,7 +29,7 @@ export default function TrackChat({ projectsDisplayed, theme }) {
           data-snack-supportedPlatforms={['mydevice']}
           style={{ overflow: 'hidden', background: 'transparent', border: '1px solid var(--color-border)', borderRadius: '4px', height: '30em', width: '100%' }}>
         </div>
-        {/* } */}
+  
       <ul>
         <li>GitHub Repo: <a href="https://github.com/jswill88/trackChat">github.com/jswill88/trackChat</a></li>
         <li>Server Repo: <a href="https://github.com/trackChat/trackChatServer">github.com/trackChat/trackChatServer</a></li>

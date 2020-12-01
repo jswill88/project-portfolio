@@ -1,10 +1,7 @@
-// import BackToTop from './BackToTop';
-// import jest from '../images/jestLogo.png';
 import mongo from '../images/mongoDBLogo.png';
 import node from '../images/nodeJsLogo.png';
 import react from '../images/reactLogo.png';
 import redux from '../images/reduxLogo.png';
-// import socket from '../images/socketIoLogo.png';
 
 export default function About() {
   return (
@@ -19,11 +16,7 @@ export default function About() {
         <img alt="Node.js" src={node}/>
         <img alt="MongoDb" src={mongo}/>
         <img alt="Redux" src={redux}/>
-        {/* <img alt="Socket.io" src={socket}/>
-        <img alt="Jest" src={jest}/> */}
       </div>
-      
-      {/* <BackToTop /> */}
       
     </div>
   )
