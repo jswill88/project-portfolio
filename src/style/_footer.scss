@@ -1,14 +1,22 @@
 footer {
   height: 10vh;
-  @media (min-width:811px) {
+  @media (min-width: 811px) {
     width: 80%;
   }
   @include flex(space-between, center);
   flex-direction: row;
-  font-size: .8em;
-  p {text-align: center;}
+  font-size: 0.8em;
+  p {
+    text-align: center;
+    &:last-of-type {
+      @include flex;
+    }
+    a {
+      margin-left: 10px;
+    }
+  }
 }
-@media screen and (max-width: 811px){
+@media screen and (max-width: 811px) {
   footer {
     width: 90%;
   }

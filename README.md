@@ -1,7 +1,7 @@
 # Portfolio
-This website is a portfolio of my projects
+This website is a portfolio of my projects. 
 
-**Live Site:** https://nostalgic-boyd-dd8e5b.netlify.app/
+**Live Site:** https://www.joshwilliamsdeveloper.com/
 
 **GitHub Repo:** https://github.com/jswill88/project-portfolio 
 

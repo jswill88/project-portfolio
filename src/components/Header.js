@@ -2,9 +2,6 @@ import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link'
 import Switch from '@material-ui/core/Switch';
 
-// Still need sticky nav for other sections
-// make sure input is unchecked after going to another part of the page
-
 function Nav({ setTheme, setCheckState, theme }) {
 
   const checkTheme = theme => theme === 'dark' ? 'light' : 'dark';
