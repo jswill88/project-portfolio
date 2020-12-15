@@ -5,6 +5,8 @@ import emailjs from 'emailjs-com';
 // show success message if email sent
 // figure out .env file for email - fill out all parts
 // make submit button style consistent with other hovers
+// reformat to be next to other contact info
+// make responsive
 
 export default function Email() {
 
