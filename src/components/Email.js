@@ -1,9 +1,10 @@
 // import { useState } from 'react';
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 
 // let the user know if the email send does not work
 // show success message if email sent
-// figure out .env file for email
+// figure out .env file for email - fill out all parts
+// make submit button style consistent with other hovers
 
 export default function Email() {
 
@@ -12,12 +13,16 @@ export default function Email() {
   const sendEmail = async e => {
     e.preventDefault();
     try {
-      // const result = await emailjs.sendForm('service_b47gxnw', 'template_s62xnbp', e.target, 'user_qWBHub1WM2FNFd9aO9VGf')
 
-      // console.log(result.text);
+
+      await emailjs.sendForm(
+        'service_b47gxnw',
+        'template_s62xnbp',
+        e.target,
+        process.env.REACT_APP_USER_ID);
 
       let inputs = document.querySelectorAll('.contact');
-      for(let input of inputs) {
+      for (let input of inputs) {
         input.value = ''
       }
 
@@ -31,24 +36,36 @@ export default function Email() {
     <form
       onSubmit={sendEmail}
     >
-      <label>Name</label>
-      <input
-        type="text"
-        name="user_name"
-        className="contact"
-      />
-      <label>Email</label>
-      <input
-        type="email"
-        name="user_email"
-        className="contact"
-      />
-      <label>Message</label>
-      <textarea
-        name="message"
-        className="contact"
-      />
-      <input type="submit" value="Send" />
+      <div>
+
+        <label htmlFor="user_name">Name</label>
+        <input
+          type="text"
+          id="user_name"
+          name="user_name"
+          className="contact"
+        />
+      </div>
+      <div>
+        <label htmlFor="user_email">Email<span>*</span></label>
+        <input
+          type="email"
+          name="user_email"
+          id="user_email"
+          className="contact"
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="message">Message<span>*</span></label>
+        <textarea
+          name="message"
+          id="message"
+          className="contact"
+          required
+        />
+      </div>
+      <button type="submit">Send</button>
     </form>
   )
 }

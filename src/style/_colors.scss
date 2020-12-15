@@ -41,8 +41,9 @@ $themes: (
         h1 div {
           background-color: map-get($map, secondary);
         }
-        form {
-          background-color: lighten(map-get($map, bg), 5%);
+        form input, form textarea {
+          background-color: lighten(map-get($map, bg), 10%);
+          color: map-get($map, textColor )
         }
         h3 {
           color: map-get($map, secondary);

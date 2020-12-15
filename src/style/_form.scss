@@ -1,3 +1,36 @@
 form {
   display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 60% 10%;
+  width: 48%;
+  height: 400px;
+  gap: 5%;
+  input, textarea {
+    width: 100%;
+    padding: 2%;
+    border: 1px solid;
+  }
+  textarea {
+    font-family: inherit;
+    resize: none;
+  }
+  div {
+    input {
+      height: 100%;
+      &:last-of-type {
+        cursor: pointer;
+      }
+    }
+    &:last-of-type {
+      grid-column: 1 / span 2;
+      height: 100%;
+      textarea {
+        height: 100%;
+      }
+    }
+  }
+  [type="submit"] {
+    grid-column: 2 / span 1;
+    cursor: pointer;
+  }
 }
