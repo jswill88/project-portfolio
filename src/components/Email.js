@@ -2,6 +2,8 @@
 // import emailjs from 'emailjs-com';
 
 // let the user know if the email send does not work
+// show success message if email sent
+// figure out .env file for email
 
 export default function Email() {
 
