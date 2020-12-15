@@ -24,6 +24,7 @@ $themes: (
         }
 
         background-color: map-get($map, bg);
+        label,
         p,
         h1,
         h2,
@@ -39,6 +40,9 @@ $themes: (
         }
         h1 div {
           background-color: map-get($map, secondary);
+        }
+        form {
+          background-color: lighten(map-get($map, bg), 5%);
         }
         h3 {
           color: map-get($map, secondary);

@@ -4,6 +4,7 @@
 @import "header";
 @import 'sections';
 @import 'projects';
+@import 'form';
 @import 'footer';
 
 @include set-color(dark, $themes);

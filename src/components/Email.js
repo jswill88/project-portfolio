@@ -1,11 +1,11 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 // import emailjs from 'emailjs-com';
 
 // let the user know if the email send does not work
 
 export default function Email() {
 
-  const [emailResult, setEmailResult] = useState(null);
+  // const [emailResult, setEmailResult] = useState(null);
 
   const sendEmail = async e => {
     e.preventDefault();
