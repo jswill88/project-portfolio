@@ -1,18 +1,21 @@
 form {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 60% 10%;
-  width: 48%;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 20% 55% 10%;
+  width: 100%;
   height: 400px;
-  gap: 5%;
+  gap: 7%;
   input, textarea {
     width: 100%;
     padding: 2%;
     border: 1px solid;
+    border-radius: 5px;
   }
   textarea {
     font-family: inherit;
     resize: none;
+    // width: 100%;
+    // grid-column: 1 / span 2;
   }
   div {
     input {
