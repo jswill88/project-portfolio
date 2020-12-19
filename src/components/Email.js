@@ -3,9 +3,7 @@ import emailjs from 'emailjs-com';
 
 // let the user know if the email send does not work
 // show success message if email sent
-// figure out .env file for email - fill out all parts
 // make submit button style consistent with other hovers
-// reformat to be next to other contact info
 // make responsive
 
 export default function Email() {
@@ -18,8 +16,8 @@ export default function Email() {
 
 
       await emailjs.sendForm(
-        'service_b47gxnw',
-        'template_s62xnbp',
+        process.env.REACT_APP_EMAIL_SERVICE,
+        process.env.REACT_APP_EMAIL_TEMPLATE,
         e.target,
         process.env.REACT_APP_USER_ID);
 

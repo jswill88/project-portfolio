@@ -1,8 +1,5 @@
-
+/** taken from to embed Expo Snack https://snack.expo.io/embed.js */
 export default function expoFunction() {
-  // if (window.ExpoSnack) {
-  //   return;
-  // }
 
   var ExpoSnack = {
     append: function(container, options) {
