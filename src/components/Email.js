@@ -1,14 +1,18 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import emailjs from 'emailjs-com';
+import {useTransition, animated} from 'react-spring'
 
-// let the user know if the email send does not work
-// show success message if email sent
 // make submit button style consistent with other hovers
 // make responsive
 
 export default function Email() {
 
-  // const [emailResult, setEmailResult] = useState(null);
+  const [emailResult, setEmailResult] = useState(false);
+  const transitions = useTransition(emailResult, null, {
+    from: { position: 'relative', left: -100, opacity: 1}, 
+    enter: { left: 0 },
+    leave: { opacity: 0 },
+  });
 
   const sendEmail = async e => {
     e.preventDefault();
@@ -20,14 +24,17 @@ export default function Email() {
         process.env.REACT_APP_EMAIL_TEMPLATE,
         e.target,
         process.env.REACT_APP_USER_ID);
-
       let inputs = document.querySelectorAll('.contact');
       for (let input of inputs) {
         input.value = ''
       }
+      setEmailResult('sent')
+      setTimeout(() => setEmailResult(false), 2000)
 
     } catch (err) {
       console.log(err.text);
+      setEmailResult('fail')
+      setTimeout(() => setEmailResult(false), 2000)
     }
 
   }
@@ -65,6 +72,11 @@ export default function Email() {
           required
         />
       </div>
+      {transitions.map(({item, key, props}) => 
+        item && <animated.p key={key} style={props}>
+         {`${item === 'fail' ? 'Send Failed' : 'Message Sent!'}`}
+          </animated.p>
+      )}
       <button type="submit">Send</button>
     </form>
   )
