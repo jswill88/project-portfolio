@@ -2,8 +2,7 @@ import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import {useTransition, animated} from 'react-spring'
 
-// make submit button style consistent with other hovers
-// make responsive
+// make alert for sent mail responsive
 
 export default function Email() {
 
