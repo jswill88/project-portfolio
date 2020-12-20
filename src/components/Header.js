@@ -27,7 +27,7 @@ function Nav({ setTheme, setCheckState, theme }) {
           onClick={() => setCheckState(false)}
         >Contact</HashLink></li>
         <li>
-          <span>Make {theme === 'dark' ? 'Light' : 'Dark'} </span>
+          <span>{theme === 'dark' ? 'Light' : 'Dark'} Mode</span>
           <Switch
             color="default"
             checked={theme === 'dark'}

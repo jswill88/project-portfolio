@@ -21,7 +21,8 @@
     padding: 1vh 0vw;
     width: 100%;
   }
-  p {
+  p,
+  label {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2;
     letter-spacing: 0.15vw;
@@ -38,6 +39,54 @@
   @include flex(space-evenly, center);
   img {
     width: 150px;
+    @media (max-width:348px) {
+      width: 100px;
+    }
+  }
+}
+#contactBox {
+  display: grid;
+  grid-template-columns: 100%;
+  @media (min-width: 1052px) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 55% 45%;
+  }
+
+  width: 100%;
+  & > div {
+    width: 100%;
+  }
+  margin-top: 3%;
+  & > div:last-of-type {
+    height: 100%;
+    @include flex(flex-start);
+    align-self: start;
+    @media (min-width: 1052px) {
+      ul {
+        align-self: flex-end;
+        margin: 0;
+        li {
+          @include flex(baseline, center);
+          svg {
+            margin-right: .5em;
+          }
+        }
+      }
+    }
+    @media (max-width:320px) {
+      svg {
+        display: none;
+      }
+    }
+    ul {
+      width: 100%;
+      li {
+        @include flex(baseline, center);
+        svg {
+          margin-right: .5em;
+        }
+      }
+    }
   }
 }
 .backToTop {

@@ -11,7 +11,7 @@ export default function Interval () {
         <img src={IntervalCode} alt="Interval Code Example" />
       </div>
       <ul>
-        <li>Use interval: npm install @joshuawilliams/interval</li>
+        <li>Use Interval: npm install @joshuawilliams/interval</li>
         <li>Node Package: <a href="https://www.npmjs.com/package/@joshuawilliams/interval">npmjs.com/package/@joshuawilliams/interval</a></li>
         <li>GitHub Repo: <a href="https://github.com/jswill88/intervals">github.com/jswill88/intervals</a></li>
         <li>October 2020</li>
