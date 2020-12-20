@@ -39,6 +39,9 @@
   @include flex(space-evenly, center);
   img {
     width: 150px;
+    @media (max-width:348px) {
+      width: 100px;
+    }
   }
 }
 #contactBox {
@@ -68,6 +71,11 @@
             margin-right: .5em;
           }
         }
+      }
+    }
+    @media (max-width:320px) {
+      svg {
+        display: none;
       }
     }
     ul {

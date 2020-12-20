@@ -2,7 +2,7 @@ import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import {useTransition, animated} from 'react-spring'
 
-// make alert for sent mail responsive
+// make contact info on large screen look better next to form
 
 export default function Email() {
 
@@ -16,7 +16,6 @@ export default function Email() {
   const sendEmail = async e => {
     e.preventDefault();
     try {
-
 
       await emailjs.sendForm(
         process.env.REACT_APP_EMAIL_SERVICE,

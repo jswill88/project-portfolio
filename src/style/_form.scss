@@ -7,7 +7,7 @@ form {
   height: 55vh;
   @media (max-width: 499px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 13% 13% 45% 10%;
+    grid-template-rows: 13% 13% 40% 8% 8%;
     height: 60vh;
   }
   width: 100%;
@@ -45,4 +45,10 @@ form {
     cursor: pointer;
     border-radius: 5px;
   }
+  @media (max-width:499px) {
+    p {
+      grid-row: 5;
+    }
+  }
+
 }
