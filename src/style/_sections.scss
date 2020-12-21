@@ -47,9 +47,17 @@
 #contactBox {
   display: grid;
   grid-template-columns: 100%;
+  column-gap: 3%;
   @media (min-width: 1052px) {
     grid-template-rows: 1fr;
-    grid-template-columns: 55% 45%;
+    // grid-template-columns: 52% 45%;
+    width: 80%;
+    align-self: flex-start;
+
+    &div:last-of-type {
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   width: 100%;
@@ -59,14 +67,14 @@
   margin-top: 3%;
   & > div:last-of-type {
     height: 100%;
-    @include flex(flex-start);
+    @include flex(center);
     align-self: start;
     @media (min-width: 1052px) {
       ul {
-        align-self: flex-end;
+        align-self: flex-start;
         margin: 0;
         li {
-          @include flex(baseline, center);
+          @include flex(flex-start, center);
           svg {
             margin-right: .5em;
           }

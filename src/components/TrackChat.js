@@ -4,6 +4,8 @@ import toExpo from '../images/toExpo.png';
 import Group from '../images/TrackChatGroup.gif';
 import Map from '../images/TrackChatMap.gif';
 import Signin from '../images/TrackChatSignIn.gif';
+import SpinnerDark from '../images/spinnerDark.gif';
+import SpinnerLight from '../images/spinnerLight.gif';
 
 export default function TrackChat({ projectsDisplayed, theme }) {
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function TrackChat({ projectsDisplayed, theme }) {
           data-snack-preview="true"
           data-snack-theme={theme}
           data-snack-supportedPlatforms={['mydevice']}
-          style={{ overflow: 'hidden', background: 'transparent', border: '1px solid var(--color-border)', borderRadius: '4px', height: '30em', width: '100%' }}>
+          style={{ overflow: 'hidden', background: 'transparent', border: '1px solid var(--color-border)', borderRadius: '4px', height: '30em', width: '100%', backgroundImage:`url(${theme === 'dark'? SpinnerDark : SpinnerLight})`, backgroundRepeat: 'no repeat'}}>
         </div>
   
       <ul>

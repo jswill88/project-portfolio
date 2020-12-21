@@ -39,7 +39,7 @@ $themes: (
           @include transition(background-color, 400ms, ease-in-out);
         }
         [type="submit"]:hover {
-          background-color: lighten(map-get($map, secondary), 15%);
+          background-color: lighten(map-get($map, secondary), 30%);
         }
         #menu + label > div {
           background-color: map-get($map, textColor);
