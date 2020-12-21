@@ -9,7 +9,7 @@ export default function Contact() {
     <>
       <div id="contact" className="bodySection">
         <h3>Contact</h3>
-        <p>Follow me on LinkedIn and GitHub. Feel free to shoot me an email if you want to collaborate, need a software developer, or just want to say hi!</p>
+        <p>Follow me on LinkedIn and GitHub. Feel free to shoot me a message if you want to collaborate, need a software developer, or just want to say hi!</p>
         <div id="contactBox">
           <div>
 

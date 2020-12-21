@@ -2,8 +2,6 @@ import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import {useTransition, animated} from 'react-spring'
 
-// make contact info on large screen look better next to form
-
 export default function Email() {
 
   const [emailResult, setEmailResult] = useState(false);
