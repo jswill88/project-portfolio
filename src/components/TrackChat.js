@@ -29,7 +29,7 @@ export default function TrackChat({ projectsDisplayed, theme }) {
           data-snack-preview="true"
           data-snack-theme={theme}
           data-snack-supportedPlatforms={['mydevice']}
-          style={{ overflow: 'hidden', background: 'transparent', border: '1px solid var(--color-border)', borderRadius: '4px', height: '30em', width: '100%', backgroundImage:`url(${theme === 'dark'? SpinnerDark : SpinnerLight})`, backgroundRepeat: 'no repeat'}}>
+          style={{ overflow: 'hidden', background: 'transparent', border: '1px solid var(--color-border)', borderRadius: '4px', height: '30em', width: '100%', backgroundImage:`url(${theme === 'dark'? SpinnerDark : SpinnerLight})`, backgroundRepeat: 'no-repeat'}}>
         </div>
   
       <ul>
