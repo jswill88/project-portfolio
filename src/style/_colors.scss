@@ -48,8 +48,7 @@ $themes: (
             color: map-get($map, textColor);
           }
         }
-        h2 {
-          background-color: map-get($map, primary);
+        h2 {  
           animation-name: delayShowing;
           animation-duration: 1560ms;
           animation-timing-function: ease-in;
