@@ -25,3 +25,10 @@ $monospacefont: 'Nanum Gothic Coding', monospace;
   -moz-transition-timing-function: $transitionTimingFunction;
   -o-transition-timing-function: $transitionTimingFunction;
 }
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}

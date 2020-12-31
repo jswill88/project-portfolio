@@ -34,6 +34,18 @@ header {
       bottom: 19%;
       right: 0;
       border-radius: 5px;
+      animation-name: expandDiv;
+      animation-duration: 1560ms;
+      animation-timing-function: ease-out;
+      animation-direction:alternate;
+    }
+    @keyframes expandDiv {
+      from {
+        width: 0;
+      }
+      to {
+        width: 90%;
+      }
     }
   }
   h2 {
@@ -42,6 +54,7 @@ header {
     top: 62%;
     margin-top: 26%;
   }
+ 
   nav {
     width: 100%;
     font-family: $monospacefont;
