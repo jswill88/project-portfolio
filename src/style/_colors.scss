@@ -25,7 +25,6 @@ $themes: (
         background-color: map-get($map, bg);
         label,
         p,
-        h1,
         h2,
         h4,
         a,
@@ -33,6 +32,22 @@ $themes: (
         li {
           color: map-get($map, textColor);
           @include transition(color, 400ms, ease-in-out);
+        }
+        @for $i from 0 through 12 {
+          #h1-#{$i} {
+            animation-name: loadH1;
+            animation-duration: calc(120ms * (#{$i} + 1));
+            animation-timing-function: step-end;
+            color: map-get($map, textColor);
+          }
+        }
+        @keyframes loadH1 {
+          from {
+            color: transparent;
+          }
+          to {
+            color: map-get($map, textColor);
+          }
         }
         [type="submit"] {
           background-color: white;

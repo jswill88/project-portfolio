@@ -56,10 +56,15 @@ export default function Header({ setTheme, theme }) {
       </label>
       <Nav setTheme={setTheme} setCheckState={setCheckState} theme={theme} />
       <div>
-        <h1>Josh Williams<div></div></h1>
+        <h1><H1 /><div></div></h1>
         <h2>Software Developer</h2>
       </div>
     </header>
   )
 }
 
+function H1 () {
+  return 'Josh Williams'
+    .split('')
+    .map((letter,i) => <span id={`h1-${i}`}>{letter}</span>)
+}
