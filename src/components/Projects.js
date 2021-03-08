@@ -3,17 +3,22 @@ import { useState } from 'react';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import PolyrhythmGenerator from './PolyrhythmGenerator';
-import TrackChat from './TrackChat';
-import BrainBugs from './BrainBugs';
-import Interval from './Interval';
-import ScubaTv from './ScubaTv';
+import PolyrhythmGenerator from './Projects/PolyrhythmGenerator';
+import TrackChat from './Projects/TrackChat';
+import BrainBugs from './Projects/BrainBugs';
+import Interval from './Projects/Interval';
+import ScubaTv from './Projects/ScubaTv';
+import CakePop from './Projects/CakePop'
 
 export default function Projects({ theme }) {
   
   const [projectDisplayed, setProjectDisplayed] = useState(window.location.hash.slice(1, window.location.hash.length))
 
   const projects = [
+    {
+      name: 'Cake Pop',
+      component: <CakePop />,
+    },
     {
       name: 'Track Chat',
       component: <TrackChat projectDisplayed={projectDisplayed} theme={theme} />,
@@ -33,7 +38,7 @@ export default function Projects({ theme }) {
     {
       name: 'Scuba TV',
       component: <ScubaTv />,
-    },
+    }
   ]
 
   const makeCamelCase = word => {

@@ -111,7 +111,8 @@ p {
       }
     }
   }
-  #polyrhythmGeneratorImages {
+  #polyrhythmGeneratorImages,
+  #cakePopImages {
     flex-direction: column;
     img {
       width: 60%;
@@ -141,7 +142,7 @@ p {
       }
     }
   }
-  #polyrhythmGeneratorImages {
+  #polyrhythmGeneratorImages, #cakePopImages {
     img {
       width: 80%;
       &:first-of-type {
@@ -157,7 +158,8 @@ p {
 @media screen and (max-width: 500px) {
   #trackChatImages img,
   #polyrhythmGeneratorImages img,
-  #brainBugsImages img {
+  #brainBugsImages img,
+  #cakePopImages img {
     width: 100% !important;
   }
   .project {
